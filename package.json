@@ -1,0 +1,16 @@
+{
+  "name": "ant-plus-ble-bridge",
+  "version": "0.0.1",
+  "description": "Bridges Ant+ devices to Bluetooth Low Energy so that you can us e.g. an Ant+ heart strap with apps on your Apple TV or iPad",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "bojan@bojanmartin.com",
+  "license": "MIT",
+  "dependencies": {
+    "@abandonware/bleno": "git+https://github.com/abandonware/bleno.git",
+    "gd-ant-plus": "0.0.29",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1"
+  }
+}

@@ -1,0 +1,1 @@
+module.exports = (duration, err = null) => new Promise((resolve, reject) => setTimeout(() => !err && resolve() || reject(err), duration))
