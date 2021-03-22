@@ -2,7 +2,7 @@ const moment = require('moment')
 const noop = require('lodash/noop')
 const Ant = require('gd-ant-plus')
 const pause = require('./pause')
-const { DEBUG } = require('./constants')
+const { PRINT_ANTPLUS_DATA } = require('./constants')
 
 let stick = null
 let stickIsOpen = false
@@ -29,7 +29,7 @@ const startup = (hrDataCallback = noop) => new Promise((resolve, reject) => {
     const hr = data.ComputedHeartRate
     const ts = moment().format('x')
 
-    DEBUG && console.log(`hr: ${hr};  \tts: ${ts};\tdevice: ${dev}`)
+    PRINT_ANTPLUS_DATA && console.log(`hr: ${hr};  \tts: ${ts};\tdevice: ${dev}`)
 
     hrDataCallback({ts, hr})
   })
